@@ -1,6 +1,4 @@
-import "dotenv/config";
-
-
+import 'dotenv/config';
 
 class Settings {
   private static ensureEnv(name: string): string {
@@ -28,6 +26,7 @@ class Settings {
   }
 
   static get openAIKey(): string {
+    console.log('OPEN_AI_KEY', process.env.OPEN_AI_KEY);
     return this.ensureEnv('OPEN_AI_KEY');
   }
 }
